@@ -1,0 +1,156 @@
+:root {
+    --backblaze: red;
+    --bunny: orange;
+    --scaleway: violet;
+    --vultr: #00b3ff;
+    --grey: #d3d3d3;
+    --green: #4CAF50;
+}
+
+.calc {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calc-block {
+    padding: 20px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid var(--dark);
+}
+
+.slider-container label {
+    position: relative;
+    font-size: 10px;
+    width: 100%;
+}
+
+.slider-container label:before {
+    content: "0";
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+}
+
+.slider-container label:after {
+    content: "1000";
+    position: absolute;
+    right: -10px;
+    bottom: -20px;
+}
+
+.param {
+    height: auto;
+}
+
+.graph {
+    height: auto;
+}
+
+.graph-block {
+    border-top: 1px solid #ddd;
+}
+
+.graph-container {
+    -webkit-appearance: none;
+    width: 0%;
+    min-width: 1% !important;
+    height: 10px;
+    background-color: var(--grey);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-right: 15px;
+    transition: background-color .5s ease;
+}
+
+.price {
+    font-weight: 600;
+}
+
+#backblaze-container.active {
+    background-color: var(--backblaze);
+    transition: background-color .5s ease;
+}
+#bunny-container.active {
+    background-color: var(--bunny);
+}
+#scaleway-container.active {
+    background-color: var(--scaleway);
+}
+#vultr-container.active {
+    background-color: var(--vultr);
+}
+
+.slider-container {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    background: var(--grey);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.form_toggle {
+	display: inline-flex;
+    align-items: center;
+	overflow: hidden;
+}
+.form_toggle-item {
+	float: left;
+	display: inline-block;
+}
+.form_toggle-item input[type=radio] {
+	display: none;
+}
+.form_toggle-item label {
+	display: inline-flex;
+    align-items: center;
+    width: 70px;
+	padding: 0px 20px;   
+	border: 1px solid #999;
+	border-right: none;
+	cursor: pointer;
+	user-select: none;   
+    margin-bottom: 0;
+    font-size: 11px;
+}
+
+.form_toggle .item-2 label {
+	border-right: 1px solid #999;
+    border-left: none;
+}
+
+.form_toggle input[type=radio]:checked + label {
+	background: #bbffbb;
+}

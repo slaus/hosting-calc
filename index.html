@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="calc col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xs-6 offset-xs-3">
+                <div class="calc-block d-flex flex-column">
+                    <div class="graph row order-md-1">
+                        <div class="col-12 graph-block" id="backblaze">
+                            <div><a href="https://backblaze.com" target="_blank">backblaze.com</a></div>
+                            <div class="d-flex align-items-center flex-start">
+                                <div class="graph-container" id="backblaze-container"></div>
+                                <span>$<span id="backblaze-cost" class="price">0</span></span>
+                            </div>
+                        </div>
+                        <div class="col-12 graph-block" id="bunny">
+                            <div class="d-flex align-items-center justify-content-between"><a href="https://bunny.net" target="_blank">bunny.net</a>
+                                <div class="form_toggle ml-3">
+                                    <div class="form_toggle-item item-1">
+                                        <input id="hdd" type="radio" name="radio-bunny" value="0.01" class="radio-button" checked>
+                                        <label for="hdd">HDD</label>
+                                    </div>
+                                    <div class="form_toggle-item item-2">
+                                        <input id="ssd" type="radio" name="radio-bunny" class="radio-button" value="0.02">
+                                        <label for="ssd">SSD</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center flex-start">
+                                <div class="graph-container" id="bunny-container"></div>
+                                <span>$<span id="bunny-cost" class="price">0</span></span>
+                            </div>
+                        </div>
+                        <div class="col-12 graph-block" id="scaleway">
+                            <div class="d-flex align-items-center justify-content-between"><a href="https://scaleway.com" target="_blank">scaleway.com</a>
+                                <div class="form_toggle ml-3">
+                                    <div class="form_toggle-item item-1">
+                                        <input id="multi" type="radio" name="radio-scaleway" class="radio-button" value="0.06" checked>
+                                        <label for="multi">MULTI</label>
+                                    </div>
+                                    <div class="form_toggle-item item-2">
+                                        <input id="single" type="radio" name="radio-scaleway" class="radio-button" value="0.03">
+                                        <label for="single">SINGLE</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center flex-start">
+                                <div class="graph-container" id="scaleway-container"></div>
+                                <span>$<span id="scaleway-cost" class="price">0</span></span>
+                            </div>
+                        </div>
+                        <div class="col-12 graph-block" id="vultr">
+                            <div><a href="https://vultr.com" target="_blank">vultr.com</a></div>
+                            <div class="d-flex align-items-center flex-start">
+                                <div class="graph-container" id="vultr-container"></div>
+                                <span>$<span id="vultr-cost" class="price">0</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="param row mt-4 mb-md-4 mt-md-0">
+                        <div class="co-12 col-md-6 slider-container mb-4 mb-md-0">
+                            <p>Storage: <span id="storage-value">100</span> GB</p>
+                            <label for="storage">
+                                <input type="range" min="0" max="1000" value="100" class="slider" id="storage" />
+                            </label>
+                        </div>
+                        <div class="col-12 col-md-6 slider-container">
+                            <p>Transfer: <span id="transfer-value">400</span> GB</p>
+                            <label for="transfer">
+                                <input type="range" min="0" max="1000" value="400" class="slider" id="transfer" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -47,11 +47,15 @@ window.addEventListener("DOMContentLoaded", () => {
         const items = document.querySelectorAll(".graph-container");
 
         for (let i = 0 ; i < items.length; i++) {
-            minValue = +items[i].getAttribute("data-price") <= minValue ? +items[i].getAttribute("data-price") : minValue;
+            minValue = +items[i].getAttribute("data-price") <= minValue ? 
+                +items[i].getAttribute("data-price") : 
+                minValue;
         }
 
         items.forEach(item => {
-            item.getAttribute("data-price") == minValue ? item.classList.add("active") : item.classList.remove("active");
+            item.getAttribute("data-price") == minValue ? 
+                item.classList.add("active") : 
+                item.classList.remove("active");
         })
 
     }
@@ -92,7 +96,11 @@ window.addEventListener("DOMContentLoaded", () => {
         if (provider.name === "scaleway") {
             checkedRadioButton("radio-scaleway");
 
-            let price = ((storageValue - provider.free) <= 0 ? 0 : (storageValue - provider.free) * selectedRadio) + ((transferValue - provider.free) <= 0 ? 0 : (transferValue - provider.free) * provider.transfer);
+            let price = ((storageValue - provider.free) <= 0 ? 
+                         0 : 
+                         (storageValue - provider.free) * selectedRadio) + ((transferValue - provider.free) <= 0 ? 
+                         0 : 
+                         (transferValue - provider.free) * provider.transfer);
             provider.price = price.toFixed(2);
 
             price = price.toFixed(2);
